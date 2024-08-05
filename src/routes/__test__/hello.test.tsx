@@ -1,11 +1,12 @@
+
+
 import {render, screen} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom'
-import Root from '../root'
+import Hello from '../hello'
 
 test('loads and displays greeting', async () => {
   // ARRANGE
-  render(<Root />)
+  render(<Hello />)
 
   // ACT
   await screen.findByText('React Router Contacts')
