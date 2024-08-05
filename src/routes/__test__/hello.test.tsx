@@ -9,7 +9,7 @@ test('loads and displays greeting', async () => {
   render(<Hello />)
 
   // ACT
-  await screen.findByText('React Router Contacts')
+  await screen.findByText('Hello')
 
   // ASSERT
   // expect(screen.getByRole('heading')).toHaveTextContent('hello there')
