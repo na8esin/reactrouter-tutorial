@@ -7,7 +7,7 @@ import {
   RouterProvider,
   createMemoryRouter,
 } from "react-router-dom";
-import {render, screen, act, waitFor,} from '@testing-library/react'
+import {render, screen } from '@testing-library/react'
 import { userEvent } from "@testing-library/user-event";
 import '@testing-library/jest-dom'
 import Hello from '../hello'
@@ -48,4 +48,7 @@ test('hello world', async () => {
 
   expect((router.state.location.pathname)).toBe('/home')
   expect((router.state.location.search)).toBe('?page=hoge')
+
+  // 使えるらしい
+  new AbortController()
 })
