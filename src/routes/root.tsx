@@ -3,6 +3,7 @@ import {
   Link,
   useLoaderData,
   Form,
+  useNavigate,
 } from "react-router-dom";
 import { getContacts, createContact } from "../contacts";
 
@@ -18,11 +19,16 @@ export async function loader() {
 
 export default function Root() {
   const { contacts } = useLoaderData();
+  const navigate = useNavigate();
+
   return (
     <>
       <div id="sidebar">
         <h1>React Router Contacts</h1>
         <div>
+          <button onClick={() => navigate("extra")}>
+            extra
+          </button>
           <form id="search-form" role="search">
             <input
               id="q"
