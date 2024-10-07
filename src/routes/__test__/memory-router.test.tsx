@@ -42,7 +42,7 @@ test('hello world', async () => {
 
   await screen.findByText('home')
 
-  // locationは取れない
+  // locationは取れない(変更に追従できてない)
   expect(location.href).toBe("http://localhost/");
   expect(location.search).toBeFalsy();
 
