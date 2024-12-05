@@ -1,8 +1,7 @@
-import { useNavigate, useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Extra() {
   const navigate = useNavigate();
-  const history = useHistory();
 
   return (
     <div>
