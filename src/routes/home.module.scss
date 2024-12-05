@@ -1,0 +1,23 @@
+.HomeBody {
+  /*
+    https://github.com/css-modules/css-modules/blob/master/docs/composition.md#exceptions
+    https://gojabako.zone/2023/css-modules
+  */
+  :global {
+    padding-top: 16px;
+
+    .error {
+      color: cyan;
+    }
+  }
+
+  font-weight: bold;
+
+  .error {
+    color: crimson;
+  }
+
+  & {
+    padding-left: 16px;
+  }
+}

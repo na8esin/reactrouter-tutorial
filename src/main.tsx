@@ -18,6 +18,7 @@ import EditContact, {
   action as editAction,
 } from "./routes/edit";
 import Extra from './routes/extra';
+import Home from './routes/home';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  { /* 直リンク指定で */
+    path: "/home",
+    element: <Home />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
